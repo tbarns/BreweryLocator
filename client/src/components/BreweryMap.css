@@ -1,0 +1,8 @@
+.breweryMapBox {
+    background-color: var(--brewery-beige);
+    flex: 1;
+}
+
+#map {
+    height: 100%; 
+}

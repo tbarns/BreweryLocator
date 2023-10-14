@@ -1,4 +1,5 @@
 import React from 'react';
+import './BreweryCard.css';
 
 function BreweryCard({ brewery }) {
     if (!brewery) return null; 

@@ -4,6 +4,7 @@ import BreweryMap from './components/BreweryMap';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import BreweryCard from './components/BreweryCard';
+import TopBrews from './components/TopBrews';
 
 function App() {
   
@@ -32,12 +33,31 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <SearchBar onChange={handleSearchChange} value={searchValue} onSearch={handleSearch} />
-      <BreweryMap breweries={breweries}/>
-      {breweries.map((brewery, index) => <BreweryCard key={index} brewery={brewery} />)}
+    <Header />
+    
+  
+    <div className="columns">
+      <div className="column is-two-thirds">
+        <SearchBar onChange={handleSearchChange} value={searchValue} onSearch={handleSearch} />
+      </div>
+      <div className="column is-one-third">
+        <TopBrews />
+      </div>
     </div>
-  );
+
+   
+    <div className="columns is-multiline is-gapless">
+      <div className="column is-two-thirds">
+        <BreweryMap breweries={breweries}/>
+      </div>
+      <div className="column is-one-third">
+        {breweries.map(brewery => 
+            <BreweryCard key={brewery.id} brewery={brewery}/>
+        )}
+      </div>
+    </div>
+  </div>
+);
 }
 
 export default App;

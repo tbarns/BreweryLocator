@@ -1,5 +1,17 @@
+@import "bulma/css/bulma.css";
+
+:root {
+  --brewery-beige: #AEA27C;
+  --ocean-teal: #5A8D92;
+  --earthy-brown: #5C4430;
+  --text-highlight: #F5E5FC;
+  --lush-green: #40531B;
+}
+
+
 .App {
   text-align: center;
+  background-color: var(--ocean-teal);
 }
 
 .App-logo {

@@ -1,0 +1,15 @@
+
+
+#color13 {
+    background-color: var(--ocean-teal);
+}
+
+#beer-me-bro {
+    background-color: var(--brewery-beige);
+    color: var(--earthy-brown);
+}
+
+#beer-me-bro:hover {
+    background-color: var(--earthy-brown);
+    color: var(--text-highlight);
+}

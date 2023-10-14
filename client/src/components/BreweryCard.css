@@ -1,0 +1,15 @@
+#resultsCards {
+    background-color: var(--ocean-teal);
+    margin: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+#resultsCards:hover {
+    background-color: var(--earthy-brown);
+    color: var(--text-highlight);
+}
+
+.column {
+    padding: .1rem;
+}

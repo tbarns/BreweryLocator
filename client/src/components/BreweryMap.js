@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import './BreweryMap.css';
 
 function BreweryMap({ breweries }) {
     const mapRef = useRef(null);

@@ -14,11 +14,18 @@ nav{
     display: flex;
     gap: 0.5rem;
     margin-bottom: 1rem;
+
 }
 
 input {
     flex: 1;
     padding: 0.5rem;
+    background-color: var(--earthy-brown);
+    color: var(--text-highlight);
+}
+
+.addBrewButton{
+    width: 50px;
 }
 
 button {
@@ -33,6 +40,11 @@ button:hover {
     background-color: var(--earthy-brown);
     color: var(--text-highlight);
 }
+
+.topBrewTitle{
+    font-size: 230%;
+}
+
 .stars {
     display: inline-flex;
     cursor: pointer;
@@ -41,12 +53,12 @@ button:hover {
 
 .star {
     font-size: 20px;
-    color: #ddd;
-    margin: 0 2px;
+    color: var(--brewery-gold);
+    margin: 0 8px;
 }
 
 .star.filled {
-    color: var(--brewery-gold);
+    color: yellow;
 }
 
 
@@ -67,4 +79,41 @@ button:hover {
 
 .delete-btn:hover {
     background-color: var(--brewery-rust);
+}
+/* ... Your existing CSS ... */
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .input-fields {
+        flex-direction: column; /* Stack children vertically */
+        align-items: stretch;   /* Stretch children to full width */
+        gap: 1rem;              /* Increase gap for better spacing */
+    }
+
+    .input-fields .column {
+        flex-basis: 100%!important; /* Make sure each column takes the full width */
+    }
+
+    button {
+        width: 100%; /* Make button full width for easier touch */
+    }
+
+    .stars {
+        justify-content: center; /* Center the stars */
+        margin: 0.5rem 0; /* Add some margin */
+    }
+
+    .star {
+        font-size: 24px; /* Increase the size for better touch */
+        margin: 0 4px;
+    }
+    li{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 398px) {
+    #text{
+        max-width: 200px;
+    }
 }

@@ -35,22 +35,28 @@ function TopBrews() {
     };
 
     return (
-        <div className="top-brews-section">
-            <h3>Your Top Brews</h3>
-            <div className="input-fields">
-                <input placeholder="Beer Name" value={beerName} onChange={(e) => setBeerName(e.target.value)} />
-                <input placeholder="Notes" value={beerNotes} onChange={(e) => setBeerNotes(e.target.value)} />
-                <div className="stars">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                        <span 
-                            key={star}
-                            className={star <= ranking ? 'star filled' : 'star'} 
-                            onClick={() => handleStarClick(star)}
-                        >★</span>
-                    ))}
-                </div>
-                <button onClick={handleAddBrew}>Add Brew</button>
-            </div>
+        <div className="top-brews-section m-5 p-4">
+    <p className="column m-5 topBrewTitle">Your Top Brews</p>
+    <div className="columns input-fields">
+        <div className="column is-one-quarter">
+            <input placeholder="Beer Name" value={beerName} onChange={(e) => setBeerName(e.target.value)} />
+        </div>
+        <div className="column is-one-third">
+            <input placeholder="Notes" value={beerNotes} onChange={(e) => setBeerNotes(e.target.value)} />
+        </div>
+        <div className="column is-one-third stars">
+            {[1, 2, 3, 4, 5].map((star) => (
+                <span 
+                    key={star}
+                    className={star <= ranking ? 'star filled' : 'star'} 
+                    onClick={() => handleStarClick(star)}
+                >★</span>
+            ))}
+        </div>
+        <div  className="column ">
+            <button onClick={handleAddBrew}>Add Brew</button>
+        </div>
+    </div>
             <ul>
                 {topBrewsList.map((brew, index) => (
                     <li key={index}>

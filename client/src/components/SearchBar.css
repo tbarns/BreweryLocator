@@ -1,12 +1,14 @@
 
 
-#color13 {
+#searchBar {
     background-color: var(--ocean-teal);
+    padding-top: 50%;
 }
 
 #beer-me-bro {
     background-color: var(--brewery-beige);
     color: var(--earthy-brown);
+
 }
 
 #beer-me-bro:hover {

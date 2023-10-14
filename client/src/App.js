@@ -3,7 +3,7 @@ import './App.css';
 import BreweryMap from './components/BreweryMap';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
-import BreweryCard from './components/BreweryCard';
+import BreweryList from './components/BreweryList'; 
 import TopBrews from './components/TopBrews';
 
 function App() {
@@ -33,31 +33,25 @@ function App() {
 
   return (
     <div className="App">
-    <Header />
-    
-  
-    <div className="columns">
-      <div className="column is-two-thirds">
-        <SearchBar onChange={handleSearchChange} value={searchValue} onSearch={handleSearch} />
+      <Header />
+      <div className="columns">
+        <div className="column is-two-third">
+          <TopBrews />
+        </div>
+        <div className="column is-one-third">
+          <SearchBar onChange={handleSearchChange} value={searchValue} onSearch={handleSearch} />
+        </div>
       </div>
-      <div className="column is-one-third">
-        <TopBrews />
-      </div>
-    </div>
-
-   
-    <div className="columns is-multiline is-gapless">
-      <div className="column is-two-thirds">
-        <BreweryMap breweries={breweries}/>
-      </div>
-      <div className="column is-one-third">
-        {breweries.map(brewery => 
-            <BreweryCard key={brewery.id} brewery={brewery}/>
-        )}
+      <div className="columns is-multiline is-gapless">
+        <div className="column is-two-thirds">
+          <BreweryMap breweries={breweries}/>
+        </div>
+        <div className="column is-one-third">
+          <BreweryList breweries={breweries} />  {/* Using BreweryList here */}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default App;

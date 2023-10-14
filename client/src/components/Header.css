@@ -1,6 +1,10 @@
 #title{
 font-size: 400%;
+letter-spacing: -1px;
+color: var(--text-highlight);
 }
 #subtitle{
 font-size: 150%;
+letter-spacing: -1.5px;
+color: var(--text-highlight);
 }

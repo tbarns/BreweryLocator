@@ -80,9 +80,7 @@ button:hover {
 .delete-btn:hover {
     background-color: var(--brewery-rust);
 }
-/* ... Your existing CSS ... */
 
-/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .input-fields {
         flex-direction: column; /* Stack children vertically */

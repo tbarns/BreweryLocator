@@ -62,10 +62,10 @@ function TopBrews() {
                     <li key={index}>
                         <button className="delete-btn" onClick={() => handleDeleteBrew(index)}>X</button>
                         <strong>{brew.name}</strong>:
+                        {brew.notes}
                         {[...Array(brew.rank)].map((_, i) => (
                             <span key={i} className="star filled">★</span>
                         ))}
-                        {brew.notes}
                     </li>
                 ))}
             </ul>

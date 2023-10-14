@@ -6,6 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
+#map {
+  width: 100%;
+  height: 400px; 
+  /* Or set to another appropriate height */
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
